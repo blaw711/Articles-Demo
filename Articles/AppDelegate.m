@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "ARTAPIClient.h"
+
 @interface AppDelegate ()
 
 @end
@@ -20,8 +22,14 @@
   
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   self.window.backgroundColor = [UIColor whiteColor];
-  
+  self.window.rootViewController = [UIViewController new];
   [self.window makeKeyAndVisible];
+  
+  ARTAPIClient *apiClient = [ARTAPIClient new];
+  
+  [apiClient fetchArticlesFeedWithPageURLString:nil completion:^(ARTArticleFeedResult * _Nullable feedResult, NSError * _Nullable error) {
+    
+  }];
   
   return YES;
 }

@@ -15,6 +15,11 @@
 		5ADF62F71F6DE507005A6311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF62F51F6DE507005A6311 /* LaunchScreen.storyboard */; };
 		5ADF63021F6DE508005A6311 /* ArticlesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF63011F6DE508005A6311 /* ArticlesTests.m */; };
 		5ADF630D1F6DE508005A6311 /* ArticlesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF630C1F6DE508005A6311 /* ArticlesUITests.m */; };
+		5AE58EDA1F6DEBAF0060E866 /* ARTAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58ED91F6DEBAF0060E866 /* ARTAPIClient.m */; };
+		5AE58EDD1F6DEC130060E866 /* ARTArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58EDC1F6DEC130060E866 /* ARTArticle.m */; };
+		5AE58EE01F6DFB8A0060E866 /* ARTArticleFeedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58EDF1F6DFB8A0060E866 /* ARTArticleFeedResult.m */; };
+		5AE58EE31F6E04EF0060E866 /* ARTArticleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58EE21F6E04EF0060E866 /* ARTArticleService.m */; };
+		5AE58EE61F7023A50060E866 /* ARTSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58EE51F7023A50060E866 /* ARTSearchService.m */; };
 		A2408182136F298B110F7134 /* libPods-ArticlesUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EFDA02B6BEBE55099F05C1 /* libPods-ArticlesUITests.a */; };
 		D3F1CD3730B693FB9853A4D6 /* libPods-Articles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B74295A90ED3C868D3FD7582 /* libPods-Articles.a */; };
 /* End PBXBuildFile section */
@@ -54,6 +59,16 @@
 		5ADF63081F6DE508005A6311 /* ArticlesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArticlesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADF630C1F6DE508005A6311 /* ArticlesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticlesUITests.m; sourceTree = "<group>"; };
 		5ADF630E1F6DE508005A6311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AE58ED81F6DEBAF0060E866 /* ARTAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTAPIClient.h; sourceTree = "<group>"; };
+		5AE58ED91F6DEBAF0060E866 /* ARTAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTAPIClient.m; sourceTree = "<group>"; };
+		5AE58EDB1F6DEC130060E866 /* ARTArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTArticle.h; sourceTree = "<group>"; };
+		5AE58EDC1F6DEC130060E866 /* ARTArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTArticle.m; sourceTree = "<group>"; };
+		5AE58EDE1F6DFB8A0060E866 /* ARTArticleFeedResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTArticleFeedResult.h; sourceTree = "<group>"; };
+		5AE58EDF1F6DFB8A0060E866 /* ARTArticleFeedResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTArticleFeedResult.m; sourceTree = "<group>"; };
+		5AE58EE11F6E04EF0060E866 /* ARTArticleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTArticleService.h; sourceTree = "<group>"; };
+		5AE58EE21F6E04EF0060E866 /* ARTArticleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTArticleService.m; sourceTree = "<group>"; };
+		5AE58EE41F7023A50060E866 /* ARTSearchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSearchService.h; sourceTree = "<group>"; };
+		5AE58EE51F7023A50060E866 /* ARTSearchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSearchService.m; sourceTree = "<group>"; };
 		5B363BE836941A3E199B00AC /* Pods-ArticlesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArticlesUITests/Pods-ArticlesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F5FF6AD94AFD036993CD3D7 /* Pods-ArticlesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArticlesTests/Pods-ArticlesTests.release.xcconfig"; sourceTree = "<group>"; };
 		A1AA1155C3279D40EA436E24 /* libPods-ArticlesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArticlesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +145,11 @@
 			children = (
 				5ADF62EA1F6DE507005A6311 /* AppDelegate.h */,
 				5ADF62EB1F6DE507005A6311 /* AppDelegate.m */,
+				5AE58ED71F6DEA5D0060E866 /* Networking */,
+				5AE58ED61F6DEA510060E866 /* Services */,
+				5AE58ED51F6DEA3B0060E866 /* Views */,
+				5AE58ED41F6DEA330060E866 /* Controllers */,
+				5AE58ED31F6DEA290060E866 /* Models */,
 				5ADF62F01F6DE507005A6311 /* Main.storyboard */,
 				5ADF62F31F6DE507005A6311 /* Assets.xcassets */,
 				5ADF62F51F6DE507005A6311 /* LaunchScreen.storyboard */,
@@ -163,6 +183,51 @@
 				5ADF630E1F6DE508005A6311 /* Info.plist */,
 			);
 			path = ArticlesUITests;
+			sourceTree = "<group>";
+		};
+		5AE58ED31F6DEA290060E866 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5AE58EDB1F6DEC130060E866 /* ARTArticle.h */,
+				5AE58EDC1F6DEC130060E866 /* ARTArticle.m */,
+				5AE58EDE1F6DFB8A0060E866 /* ARTArticleFeedResult.h */,
+				5AE58EDF1F6DFB8A0060E866 /* ARTArticleFeedResult.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5AE58ED41F6DEA330060E866 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5AE58ED51F6DEA3B0060E866 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5AE58ED61F6DEA510060E866 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5AE58EE11F6E04EF0060E866 /* ARTArticleService.h */,
+				5AE58EE21F6E04EF0060E866 /* ARTArticleService.m */,
+				5AE58EE41F7023A50060E866 /* ARTSearchService.h */,
+				5AE58EE51F7023A50060E866 /* ARTSearchService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		5AE58ED71F6DEA5D0060E866 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5AE58ED81F6DEBAF0060E866 /* ARTAPIClient.h */,
+				5AE58ED91F6DEBAF0060E866 /* ARTAPIClient.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		7244C5152083E6F0099CD554 /* Frameworks */ = {
@@ -440,8 +505,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE58EE31F6E04EF0060E866 /* ARTArticleService.m in Sources */,
 				5ADF62EC1F6DE507005A6311 /* AppDelegate.m in Sources */,
 				5ADF62E91F6DE507005A6311 /* main.m in Sources */,
+				5AE58EDD1F6DEC130060E866 /* ARTArticle.m in Sources */,
+				5AE58EDA1F6DEBAF0060E866 /* ARTAPIClient.m in Sources */,
+				5AE58EE61F7023A50060E866 /* ARTSearchService.m in Sources */,
+				5AE58EE01F6DFB8A0060E866 /* ARTArticleFeedResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
