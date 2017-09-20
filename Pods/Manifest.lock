@@ -29,6 +29,7 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.9):
     - PINCache (= 3.0.1-beta.4)
     - PINRemoteImage/Core
+  - pop (1.0.9)
   - Texture (2.3.2):
     - Texture/PINRemoteImage (= 2.3.2)
   - Texture/Core (2.3.2)
@@ -39,6 +40,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - pop
   - Texture
 
 SPEC CHECKSUMS:
@@ -46,8 +48,9 @@ SPEC CHECKSUMS:
   PINCache: a89c8f609232afac77128557bd12c861844423d7
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
   PINRemoteImage: e4e02e15a6f96cedbcef2abf1c9c1228dc9897d7
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   Texture: 18664254419f35de27af76399b3b265cbad5740a
 
-PODFILE CHECKSUM: f0f607a9d5e05a5dcbf1383b818e3192d1df00e0
+PODFILE CHECKSUM: 9e4d8361bf7b49811035bd629b4ebc1e2ce759e5
 
 COCOAPODS: 1.0.1

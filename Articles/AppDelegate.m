@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 
 #import "ARTAPIClient.h"
+#import "ARTArticleService.h"
+#import "ARTArticleFeedViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,10 +28,13 @@
   [self.window makeKeyAndVisible];
   
   ARTAPIClient *apiClient = [ARTAPIClient new];
+  ARTArticleService *articleService = [[ARTArticleService alloc] initWithAPIClient:apiClient];
   
-  [apiClient fetchArticlesFeedWithPageURLString:nil completion:^(ARTArticleFeedResult * _Nullable feedResult, NSError * _Nullable error) {
-    
-  }];
+  ARTArticleFeedViewController *feedViewController = [[ARTArticleFeedViewController alloc] initWithArticleService:articleService];
+
+  ASNavigationController *navigationController = [[ASNavigationController alloc] initWithRootViewController:feedViewController];
+  
+  self.window.rootViewController = navigationController;
   
   return YES;
 }

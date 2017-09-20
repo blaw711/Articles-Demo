@@ -9,6 +9,7 @@ target 'Articles' do
   
   pod 'AFNetworking'
   pod 'Texture'
+  pod 'pop'
 
   target 'ArticlesTests' do
     inherit! :search_paths

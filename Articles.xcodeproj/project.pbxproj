@@ -10,7 +10,6 @@
 		2C30A8B82EA9FEC7BA027D7B /* libPods-ArticlesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AA1155C3279D40EA436E24 /* libPods-ArticlesTests.a */; };
 		5ADF62E91F6DE507005A6311 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF62E81F6DE507005A6311 /* main.m */; };
 		5ADF62EC1F6DE507005A6311 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF62EB1F6DE507005A6311 /* AppDelegate.m */; };
-		5ADF62F21F6DE507005A6311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF62F01F6DE507005A6311 /* Main.storyboard */; };
 		5ADF62F41F6DE507005A6311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF62F31F6DE507005A6311 /* Assets.xcassets */; };
 		5ADF62F71F6DE507005A6311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADF62F51F6DE507005A6311 /* LaunchScreen.storyboard */; };
 		5ADF63021F6DE508005A6311 /* ArticlesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF63011F6DE508005A6311 /* ArticlesTests.m */; };
@@ -20,6 +19,9 @@
 		5AE58EE01F6DFB8A0060E866 /* ARTArticleFeedResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58EDF1F6DFB8A0060E866 /* ARTArticleFeedResult.m */; };
 		5AE58EE31F6E04EF0060E866 /* ARTArticleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58EE21F6E04EF0060E866 /* ARTArticleService.m */; };
 		5AE58EE61F7023A50060E866 /* ARTSearchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58EE51F7023A50060E866 /* ARTSearchService.m */; };
+		5AE58EE91F7063A00060E866 /* ARTArticleFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58EE81F7063A00060E866 /* ARTArticleFeedViewController.m */; };
+		5AE58EED1F71CD5A0060E866 /* ARTArticleFeedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58EEC1F71CD5A0060E866 /* ARTArticleFeedViewModel.m */; };
+		5AE58EF01F71D4BE0060E866 /* ARTArticleFeedCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE58EEF1F71D4BE0060E866 /* ARTArticleFeedCellNode.m */; };
 		A2408182136F298B110F7134 /* libPods-ArticlesUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EFDA02B6BEBE55099F05C1 /* libPods-ArticlesUITests.a */; };
 		D3F1CD3730B693FB9853A4D6 /* libPods-Articles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B74295A90ED3C868D3FD7582 /* libPods-Articles.a */; };
 /* End PBXBuildFile section */
@@ -49,7 +51,6 @@
 		5ADF62E81F6DE507005A6311 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5ADF62EA1F6DE507005A6311 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5ADF62EB1F6DE507005A6311 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5ADF62F11F6DE507005A6311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5ADF62F31F6DE507005A6311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5ADF62F61F6DE507005A6311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ADF62F81F6DE507005A6311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +70,12 @@
 		5AE58EE21F6E04EF0060E866 /* ARTArticleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTArticleService.m; sourceTree = "<group>"; };
 		5AE58EE41F7023A50060E866 /* ARTSearchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTSearchService.h; sourceTree = "<group>"; };
 		5AE58EE51F7023A50060E866 /* ARTSearchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTSearchService.m; sourceTree = "<group>"; };
+		5AE58EE71F7063A00060E866 /* ARTArticleFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTArticleFeedViewController.h; sourceTree = "<group>"; };
+		5AE58EE81F7063A00060E866 /* ARTArticleFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTArticleFeedViewController.m; sourceTree = "<group>"; };
+		5AE58EEB1F71CD5A0060E866 /* ARTArticleFeedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTArticleFeedViewModel.h; sourceTree = "<group>"; };
+		5AE58EEC1F71CD5A0060E866 /* ARTArticleFeedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTArticleFeedViewModel.m; sourceTree = "<group>"; };
+		5AE58EEE1F71D4BE0060E866 /* ARTArticleFeedCellNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTArticleFeedCellNode.h; sourceTree = "<group>"; };
+		5AE58EEF1F71D4BE0060E866 /* ARTArticleFeedCellNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTArticleFeedCellNode.m; sourceTree = "<group>"; };
 		5B363BE836941A3E199B00AC /* Pods-ArticlesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArticlesUITests/Pods-ArticlesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F5FF6AD94AFD036993CD3D7 /* Pods-ArticlesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArticlesTests/Pods-ArticlesTests.release.xcconfig"; sourceTree = "<group>"; };
 		A1AA1155C3279D40EA436E24 /* libPods-ArticlesTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ArticlesTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,12 +152,12 @@
 			children = (
 				5ADF62EA1F6DE507005A6311 /* AppDelegate.h */,
 				5ADF62EB1F6DE507005A6311 /* AppDelegate.m */,
-				5AE58ED71F6DEA5D0060E866 /* Networking */,
-				5AE58ED61F6DEA510060E866 /* Services */,
-				5AE58ED51F6DEA3B0060E866 /* Views */,
 				5AE58ED41F6DEA330060E866 /* Controllers */,
 				5AE58ED31F6DEA290060E866 /* Models */,
-				5ADF62F01F6DE507005A6311 /* Main.storyboard */,
+				5AE58ED51F6DEA3B0060E866 /* Views */,
+				5AE58EEA1F71CD390060E866 /* View Models */,
+				5AE58ED71F6DEA5D0060E866 /* Networking */,
+				5AE58ED61F6DEA510060E866 /* Services */,
 				5ADF62F31F6DE507005A6311 /* Assets.xcassets */,
 				5ADF62F51F6DE507005A6311 /* LaunchScreen.storyboard */,
 				5ADF62F81F6DE507005A6311 /* Info.plist */,
@@ -199,6 +206,8 @@
 		5AE58ED41F6DEA330060E866 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5AE58EE71F7063A00060E866 /* ARTArticleFeedViewController.h */,
+				5AE58EE81F7063A00060E866 /* ARTArticleFeedViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -206,6 +215,8 @@
 		5AE58ED51F6DEA3B0060E866 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5AE58EEE1F71D4BE0060E866 /* ARTArticleFeedCellNode.h */,
+				5AE58EEF1F71D4BE0060E866 /* ARTArticleFeedCellNode.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -228,6 +239,15 @@
 				5AE58ED91F6DEBAF0060E866 /* ARTAPIClient.m */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		5AE58EEA1F71CD390060E866 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				5AE58EEB1F71CD5A0060E866 /* ARTArticleFeedViewModel.h */,
+				5AE58EEC1F71CD5A0060E866 /* ARTArticleFeedViewModel.m */,
+			);
+			name = "View Models";
 			sourceTree = "<group>";
 		};
 		7244C5152083E6F0099CD554 /* Frameworks */ = {
@@ -316,6 +336,7 @@
 				TargetAttributes = {
 					5ADF62E31F6DE507005A6311 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 28CDE4D38N;
 						ProvisioningStyle = Automatic;
 					};
 					5ADF62FC1F6DE508005A6311 = {
@@ -357,7 +378,6 @@
 			files = (
 				5ADF62F71F6DE507005A6311 /* LaunchScreen.storyboard in Resources */,
 				5ADF62F41F6DE507005A6311 /* Assets.xcassets in Resources */,
-				5ADF62F21F6DE507005A6311 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,11 +527,14 @@
 			files = (
 				5AE58EE31F6E04EF0060E866 /* ARTArticleService.m in Sources */,
 				5ADF62EC1F6DE507005A6311 /* AppDelegate.m in Sources */,
+				5AE58EED1F71CD5A0060E866 /* ARTArticleFeedViewModel.m in Sources */,
 				5ADF62E91F6DE507005A6311 /* main.m in Sources */,
 				5AE58EDD1F6DEC130060E866 /* ARTArticle.m in Sources */,
 				5AE58EDA1F6DEBAF0060E866 /* ARTAPIClient.m in Sources */,
 				5AE58EE61F7023A50060E866 /* ARTSearchService.m in Sources */,
 				5AE58EE01F6DFB8A0060E866 /* ARTArticleFeedResult.m in Sources */,
+				5AE58EF01F71D4BE0060E866 /* ARTArticleFeedCellNode.m in Sources */,
+				5AE58EE91F7063A00060E866 /* ARTArticleFeedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,14 +570,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5ADF62F01F6DE507005A6311 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5ADF62F11F6DE507005A6311 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5ADF62F51F6DE507005A6311 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -661,7 +676,9 @@
 			baseConfigurationReference = 4CF784FAF9B3BEA3BC5ECDD9 /* Pods-Articles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28CDE4D38N;
 				INFOPLIST_FILE = Articles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = blaw711.Articles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -673,7 +690,9 @@
 			baseConfigurationReference = 2336A94ADD3E1792487D183B /* Pods-Articles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28CDE4D38N;
 				INFOPLIST_FILE = Articles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = blaw711.Articles;
 				PRODUCT_NAME = "$(TARGET_NAME)";
