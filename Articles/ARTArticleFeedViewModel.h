@@ -8,14 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-@class ARTArticleService;
+@class ARTArticleService, ARTArticle;
 
 @interface ARTArticleFeedViewModel : NSObject
 
 - (instancetype __nullable)initWithArticleService:(ARTArticleService * __nullable)articleService;
 
-- (void)fetchInitialArticleFeedPageWithCompletion:(void (^ __nullable)(NSArray * __nullable articles))completion;
+- (NSInteger)numberOfRows;
 
-//- (void)fetchNextArticleFeedPageWithCompletion:
+- (ARTArticle * __nullable)articleForIndexPath:(NSIndexPath *__nonnull)indexPath;
+
+- (BOOL)canFetchMorePages;
+
+//- (void)fetchInitialArticleFeedPageWithCompletion:(void (^ __nullable)(NSArray * __nullable articles, NSError *__nullable error))completion;
+
+- (void)pageArticleFeedWithCompletion:(void (^ __nullable)(NSArray * __nullable articles, NSError *__nullable error))completion;
 
 @end

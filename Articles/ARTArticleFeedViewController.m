@@ -10,6 +10,7 @@
 #import "ARTArticleService.h"
 #import "ARTArticleFeedResult.h"
 #import "ARTArticleFeedCellNode.h"
+#import "ARTArticleFeedViewModel.h"
 #import "ARTArticle.h"
 
 @import SafariServices;
@@ -21,6 +22,8 @@
 @property (nonatomic, strong) ARTArticleService *articleService;
 
 @property (nonatomic, strong) NSArray <ARTArticle *> *articles;
+
+@property (nonatomic, strong) ARTArticleFeedViewModel *viewModel;
 
 @end
 
@@ -35,6 +38,8 @@
     _tableNode.dataSource = self;
     
     _articleService = articleService;
+    
+    _viewModel = [[ARTArticleFeedViewModel alloc] initWithArticleService:articleService];
   }
   
   return self;
@@ -50,8 +55,7 @@
     
   self.tableNode.view.separatorStyle = UITableViewCellSeparatorStyleNone;
   
-  [self.articleService fetchArticlesFeedWithPageURLString:nil completion:^(ARTArticleFeedResult * _Nullable feedResult, NSError * _Nullable error) {
-    self.articles = feedResult.articles;
+  [self.viewModel pageArticleFeedWithCompletion:^(NSArray * _Nullable articles, NSError * _Nullable error) {
     [self.tableNode reloadData];
   }];
 }
@@ -72,12 +76,12 @@
 
 - (NSInteger)tableNode:(ASTableNode *)tableNode numberOfRowsInSection:(NSInteger)section
 {
-  return self.articles.count;
+  return [self.viewModel numberOfRows];
 }
 
 - (ASCellNodeBlock)tableNode:(ASTableNode *)tableNode nodeBlockForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  ARTArticle *article = self.articles[indexPath.row];
+  ARTArticle *article = [self.viewModel articleForIndexPath:indexPath];
   
   return ^{
     ARTArticleFeedCellNode *feedCellNode = [[ARTArticleFeedCellNode alloc] initWithArticle:article];
@@ -89,12 +93,55 @@
 
 - (void)tableNode:(ASTableNode *)tableNode didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  ARTArticle *article = self.articles[indexPath.row];
+  ARTArticle *article = [self.viewModel articleForIndexPath:indexPath];
 
   SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:article.URL];
   safariViewController.title = article.title;
   
   [self.navigationController pushViewController:safariViewController animated:YES];
+}
+
+- (BOOL)shouldBatchFetchForTableNode:(ASTableNode *)tableNode
+{
+  return [self.viewModel canFetchMorePages];
+}
+
+- (void)tableNode:(ASTableNode *)tableNode willBeginBatchFetchWithContext:(ASBatchContext *)context
+{
+  [self.viewModel pageArticleFeedWithCompletion:^(NSArray * _Nullable articles, NSError * _Nullable error) {
+    if (articles.count > 0) {
+      [self insertArticles:articles completion:^(BOOL finished) {
+        [context completeBatchFetching:YES];
+      }];
+    } else {
+      [context completeBatchFetching:YES];
+    }
+  }];
+}
+
+#pragma mark - Convenience Methods
+
+// methods calculates the indexPaths for the new articles and inserts them into the tableNode
+- (void)insertArticles:(NSArray <ARTArticle *> *)articles completion:(void(^)(BOOL finished))completion
+{
+  NSInteger section = 0;
+  NSMutableArray *indexPaths = [NSMutableArray new];
+  NSInteger totalNewArticles = [self.viewModel numberOfRows];
+  
+  for (NSInteger row = (totalNewArticles - articles.count); row < totalNewArticles; row++) {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:row inSection:section];
+    [indexPaths addObject:indexPath];
+  }
+  
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [self.tableNode performBatchAnimated:NO updates:^{
+      [self.tableNode insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+    } completion:^(BOOL finished) {
+      if (completion) {
+        completion(finished);
+      }
+    }];
+  });
 }
 
 @end
