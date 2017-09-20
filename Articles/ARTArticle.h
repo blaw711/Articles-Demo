@@ -14,13 +14,17 @@
 
 @property (nonatomic, strong, readonly) NSString *__nullable author;
 
-@property (nonatomic, strong, readonly) NSString *__nullable hero;
-
 @property (nonatomic, strong, readonly) NSDate *__nullable publishDate;
 
 @property (nonatomic, strong, readonly) NSString *__nullable title;
 
 @property (nonatomic, strong, readonly) NSURL *__nullable URL;
+
+@property (nonatomic, strong, readonly) NSURL *__nullable thumbnailURL;
+
+@property (nonatomic, strong, readonly) NSURL *__nullable largeImageURL;
+
+@property (nonatomic, strong, readonly) NSURL *__nullable authorAvatarURL;
 
 - (instancetype __nullable)initWithDictionary:(NSDictionary <NSString *, id> * __nonnull)dictionary;
 

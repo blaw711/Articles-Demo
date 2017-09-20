@@ -31,6 +31,7 @@
 {
   [self.APIClient fetchArticlesFeedWithPageURLString:urlString completion:^(ARTArticleFeedResult * _Nullable feedResult, NSError * _Nullable error) {
     if ([feedResult isKindOfClass:[ARTArticleFeedResult class]]) {
+      
       // save feed result?
     }
     

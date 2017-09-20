@@ -31,6 +31,9 @@ static NSString *const ARTInitialFeedURLString = @"/api/articles/ios_index?page=
   
   [self GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
     ARTArticleFeedResult *result;
+    
+    NSLog(@"%@", responseObject);
+
     if ([responseObject isKindOfClass:[NSDictionary class]]) {
       result = [[ARTArticleFeedResult alloc] initWithDictionary:responseObject];
     }
